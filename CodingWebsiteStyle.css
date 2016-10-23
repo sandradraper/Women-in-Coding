@@ -1,0 +1,57 @@
+h3 {
+
+	color: #FFD7CE;
+	text-align: center;
+	font-size: 3.75em;
+	font-family: comic; 
+}
+
+
+nav {
+
+    font-size: 14px;
+    font-family: georgia;
+    text-align: center;
+    font-size: large;
+   	float: center;
+}
+
+h1 {
+	color: #B6E3EA;
+	text-align: center;
+	font-size: large; 
+}
+
+h2 {
+	color: #C3C3E5;
+	text-align: center;
+	font-size: medium; 
+}
+
+p {
+	color: #C3C3E5;
+	font-size: medium;
+}
+
+var periwinkle = #C3C3E5
+
+
+
+
+a:link{
+	color: #4455dd;
+
+} 
+
+a:visited{
+	color: #9d99b3
+}
+
+a:hover {
+	color: #BB00FF;
+} 
+
+a:active{
+
+}
+

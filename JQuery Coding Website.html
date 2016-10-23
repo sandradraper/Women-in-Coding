@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title> Sandra Draper </title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" type="text/css" href="MyPortfolioStyle.css">
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+
+	<script>
+		var changePage = function(){
+			var filename = $("#select-choice-1").val()
+			console.log(filename);
+			$("#placeHolder").attr('src', filename);
+		}
+	</script>
+
+</head>
+
+	<nav>
+
+	 <a href="homePage"><div>Home</div></a>
+	 <a href="aboutPage"><div>About</div></a>
+	 <a href="projectsPage"><div>Projects</div></a>
+
+	</nav>
+
+
+<body> 
+
+
+<div data-role="page" id= "homePage">
+
+			<a href= "#pageTwo"> Projects </a>	
+
+
+</div>   <!-- /page -->
+
+
+<div data-role="page" id="projectsPage">
+
+	<div data-role= "header">
+		<h1> Projects </h1>
+	</div>
+
+	<div data-role= "content">
+		<p> These are some of my projects!! </p>
+
+		<div data-role="header">
+			<h1>
+			<font size="50"> Sandra's Projects! </font>
+		    </h1>
+		</div><!-- /header -->
+
+		<div data-role="content">	
+			<h2>
+				This is some of the projects I have done in Girls Who Code!!!
+			</h2>
+
+
+			<p>   
+
+				<a href = "http://www.khanacademy.org/computer-programming/jackson-pollock-project/5341949662986240" > 
+
+				1.  Jackson Pollock Project </a>
+
+			</p>
+
+			<p>
+
+				<a href =  "http://www.khanacademy.org/computer-programming/fish-tank-project/5546143414091776" >
+
+				2.  Fish Tank 1.0 </a>
+
+			</p>
+
+			<p>
+				<a href = "https://scratch.mit.edu/projects/67804594/#player" >
+
+				3.  Paddle Ball Game </a>
+
+			</p>
+
+
+		<a href= "#pageOne" >Go Back</a>
+				
+	</div>
+
+</div>
+
+</body>
+</html>

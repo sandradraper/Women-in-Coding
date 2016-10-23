@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<script src="processing-1.4.1.js"></script>
+		<script type="text/processing" data-processing-target="mycanvas">
+			var fish;
+			var listOfFish = [];
+			var numFish = 100;
+
+			void setup() {
+				size(1900,900);
+			  	for(i = 0; i < numFish; i++) {
+					var newFishXPos = random(10, 700);
+					var newFishYPos = random(10, 500);
+					var newFish = new Fish(newFishXPos, newFishYPos); //make a new Fish
+					listOfFish.push(newFish); //store Fish in list
+				}
+			}
+
+			void draw(){
+	 			background(0, 51, 204);
+	 			for(i = 0; i < numFish; i++) {
+	 				var fish = listOfFish[i];
+	 				fish.drawFish();
+	 				fish.moveFish();
+	 				fish.bounceFish();
+ 				}
+ 			}
+
+
+			class Fish {
+				//attributes
+ 				var xPos;
+ 				var yPos;
+ 				var speedX;
+ 				var speedY;
+	 			var r;
+	 			var g;
+	 			var b;
+
+	 			Fish (xPosition, yPosition) {
+	 				xPos = xPosition;
+	 				yPos = yPosition;
+	 				speedX = random(-3, -6);
+	 				speedY = random(1, 3);
+	 				r = random(50, 300);
+	 				g = 100;
+	 				b = 100;
+ 				}
+
+ 				void moveFish() {
+					xPos = xPos + speedX;
+					yPos = yPos + speedY;
+				}
+
+ 				void drawFish() {
+ 					noStroke();
+				    fill(r, g, b);
+				   	ellipse(xPos, yPos, 80, 50);
+				   	if (speedX < 0) {
+						triangle(xPos+20, yPos, xPos+50, yPos-30, xPos+50, yPos+30);
+						fill(0, 0, 0);
+    					ellipse(xPos-26, yPos-7, 5, 5);
+					}
+					if (speedX > 0) {
+						triangle(xPos-20, yPos, xPos-50, yPos+30, xPos-50, yPos-30);
+						fill(0, 0, 0);
+    					ellipse(xPos+26, yPos-7, 5, 5);
+					}
+ 				}
+
+ 				void bounceFish() {
+ 					if (xPos < 0 || xPos > 1900) {
+ 						speedX = speedX * -1;
+ 					}
+
+ 					if (yPos < 0 || yPos > 900) {
+						speedY = speedY * -1;
+ 					}
+
+ 				}
+
+			}
+		</script>
+	</head>
+	<body>
+		<canvas id="mycanvas"></canvas>
+	</body>
+</html>
